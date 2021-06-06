@@ -1,26 +1,28 @@
-//
-// Para incluir los diferentes sets de cartas podemos _importar_ el archivo
-// JavasSript que contenga el `export` correspondiente...
-//
-// import pokemon from '../data/pokemon/pokemon.js';
-// console.log(pokemon);
-//
-// O alternativamente podríamos cargar el JSON de forma asíncrona usando
-// `fetch` en el momento que consideremos necesario.
-//
-// fetch('./data/pokemon/pokemon.json')
-//   .then(resp => resp.json())
-//   .then(console.log)
-//   .catch(console.error);
-//
+import pokemon from '../data/pokemon/pokemon.js';
+console.log(pokemon);
+
+const data = pokemon.items;
 
 const App = () => {
-  const el = document.createElement('div');
+  // se crea estructura general html.
+  const generalContainer = document.createElement("div");
+  const header = document.createElement("header");
+  generalContainer.appendChild(header);
+  const main = document.createElement("main");
+  generalContainer.appendChild(main);
+  const footer = document.createElement("footer");
+  generalContainer.appendChild(footer);
 
-  el.className = 'App';
-  el.textContent = 'Hola mundo!';
+  // se crean los elementos hijos del elemento header.
+  const title = document.createElement("h1");
+  title.textContent = "Memory Match: Pokemon Edition!";
+  header.appendChild(title);
 
-  return el;
+  // se crean los elementos hijos del elemento main.
+  let gameContainer = document.createElement("section");
+  main.appendChild(gameContainer);
+
+  return generalContainer;
 };
 
 export default App;

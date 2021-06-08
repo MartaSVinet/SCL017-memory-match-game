@@ -1,7 +1,9 @@
 import pokemon from '../data/pokemon/pokemon.js';
 console.log(pokemon);
 
+// array de ítems (objetos).
 const data = pokemon.items;
+console.log(data);
 
 const App = () => {
   // se crea estructura general html.

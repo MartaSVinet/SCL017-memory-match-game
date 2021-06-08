@@ -1,3 +1,25 @@
+## Perfil de usuarix:
+
+Está en el rango estario millennial (25 a 40 años app.). La temática del juego (Pokémon) le resulta a la vez evocativa y contemporánea, pues la recuerda de las animaciones y los video juegos de su infancia, y la nota vigente como marca comercial y de entretenimiento para las generaciones actuales.
+
+Recurre a la aplicación en momentos de ocio, buscando recrearse.
+
+## U.H.1.- Como usuario, quiero jugar en una interfaz bien proporcionada y comprensible a primera vista.
+
+### Criterios de aceptación:
+
+Los componentes gráficos de la aplicación (encabezado, grilla de cartas, pie de página, etc.) se jerarquizan, posicionan y ajustan en tamaño y color en razón de optimizar su visibilidad. La pantalla en general luce ordenada y resulta autoexplicativa.
+
+### Definición de terminado:
+
+(Aún en proceso).
+
+Los bosquejos de baja fidelidad (en papel y en digital) dan cuenta de la estructura gráfica básica de la aplicación.
+
+![](src/images/bajafidelidad1.png)
+
+El prototipo de alta fidelidad (creado en Figma) muestra, además, la "ornamentación" (un fondo y un tipo de letra acorde a la temática del juego).
+
 # Memory Match Game
 
 ## Índice

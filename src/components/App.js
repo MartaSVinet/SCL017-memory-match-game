@@ -17,7 +17,7 @@ const App = () => {
 
   // se crean los elementos hijos del elemento header.
   const title = document.createElement("h1");
-  title.textContent = "Memory Match: Pokemon Edition!";
+  title.innerHTML = "<img src='../images/title.jpg'>";
   header.appendChild(title);
 
   // se crean los elementos hijos del elemento main.

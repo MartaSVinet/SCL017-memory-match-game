@@ -1,0 +1,7 @@
+.card-frames {
+  display: inline-block;
+  border: 1px solid black;
+  margin: 10px;
+  height: 120px;
+  width: 120px;
+}

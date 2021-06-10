@@ -1,3 +1,8 @@
+.cards-container {
+  border: 1px solid black;
+  height: 425px;
+  width: 855px;
+}
 .card-frames {
   display: inline-block;
   border: 1px solid black;

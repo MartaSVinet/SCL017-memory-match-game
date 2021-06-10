@@ -9,6 +9,15 @@ console.log(dataItems);
 const duplicatedData = dataItems.concat(dataItems);
 console.log(duplicatedData);
 
+// función para barajar duplicatedData.
+function shuffle(array) {
+  for(let i = array.length -1 ; i > 0 ;i--) {
+    let j = Math.floor( Math.random() * (i + 1) );
+    [array[i] ,array[j]] = [array[j], array[i]];
+  }
+}    
+shuffle(duplicatedData);
+
 const App = () => {
   // estructura html.
   const generalContainer = document.createElement("div");
@@ -21,11 +30,15 @@ const App = () => {
 
   // hijos del elemento header.
   const title = document.createElement("h1");
-  title.textContent = "Memorama";
+  const titleImage = document.createElement("img");
+  titleImage.className = "title-image";
+  titleImage.setAttribute("src","");
+  title.appendChild(titleImage);
   header.appendChild(title);
 
   // grilla de cartas.
   let cardsContainer = document.createElement("section");
+  cardsContainer.className = "cards-container";
   main.appendChild(cardsContainer);
 
   // marcos e imágenes de las cartas.

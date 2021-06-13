@@ -16,8 +16,8 @@ const App = () => {
   generalContainer.appendChild(footer);
 
   // se crean los elementos hijos del elemento header.
-  const title = document.createElement("h1");
-  title.innerHTML = "<img src='../images/title.jpg'>";
+  const title = document.createElement("img");
+  title.setAttribute("src","../images/title.png" );
   header.appendChild(title);
 
   // se crean los elementos hijos del elemento main.

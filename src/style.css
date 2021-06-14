@@ -1,7 +1,43 @@
+body {
+  background: url("images/landscape.png");
+  /*background-repeat: no-repeat;*/
+  background-size: cover;
+  display: inline;
+  }
+
+  h1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+
+
+
+  .title-image {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+  }
+
 .cards-container {
-  border: 1px solid black;
+  /*border: 1px solid black;
   height: 425px;
-  width: 855px;
+  width: 855px;*/
+  margin-left: 25%;
+  margin-right: 25%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: space-around;
+  align-self: center;
+  flex-basis: auto;
 }
 .card-frames {
   display: inline-block;
@@ -9,4 +45,10 @@
   margin: 10px;
   height: 120px;
   width: 120px;
+}
+
+.cards-container:nth-child(1) {
+  flex-basis: auto;
+  align-items: center;
+  align-self: center;
 }

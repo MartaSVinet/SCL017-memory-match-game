@@ -42,7 +42,7 @@ const App = () => {
   const title = document.createElement("h1");
   const titleImage = document.createElement("img");
   titleImage.className = "title-image";
-  titleImage.setAttribute("src","");
+  titleImage.setAttribute("src", "../images/title.png");
   title.appendChild(titleImage);
   header.appendChild(title);
 

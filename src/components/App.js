@@ -77,20 +77,16 @@ const App = () => {
 
   // función que compara los pares de cartas cliqueadas.
   function checkMatch(arrr) {
-    while (arrr.length == 2) {
+    if (arrr.length == 2) {
       if (arrr[0].id == arrr[1].id) {
         score += 100;
         scoreboard.innerHTML = ": " + score;
-        let uno = clicked.pop(arrr[0]);
-        let dos = clicked.pop(arrr[1]);
-        matchedCards.push(uno);
-        matchedCards.push(dos);
+        arrr.length = 0 ;
         alert("Match");
       } else {
         arrr.length = 0;
         alert("No Match");
       }
-      break;
     }
   };
 

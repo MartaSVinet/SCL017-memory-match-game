@@ -52,8 +52,13 @@ const App = () => {
   main.appendChild(cardsContainer);
 
   // elemento que muestra el contador.
-  const scoreboar = document.createElement("p");
-  main.appendChild(scoreboar);
+  const parrafo = document.createElement("p");
+  parrafo.className = "parrafo";
+  parrafo.innerHTML = "Puntaje";
+  main.appendChild(parrafo);
+  const scoreboard = document.createElement("span");
+  scoreboard.className = "score"
+  parrafo.appendChild(scoreboard);
 
   // marcos e imágenes de las cartas.
   for (let i = 0; i < duplicatedData.length; i++) {
@@ -75,7 +80,7 @@ const App = () => {
     while (arrr.length == 2) {
       if (arrr[0].id == arrr[1].id) {
         score += 100;
-        scoreboar.innerHTML = score;
+        scoreboard.innerHTML = ": " + score;
         let uno = clicked.pop(arrr[0]);
         let dos = clicked.pop(arrr[1]);
         matchedCards.push(uno);

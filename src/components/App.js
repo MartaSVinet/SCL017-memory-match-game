@@ -1,5 +1,4 @@
 import pokemon from '../data/pokemon/pokemon.js';
-console.log(pokemon);
 
 // array de ítems (objetos).
 const dataItems = pokemon.items;
@@ -15,15 +14,11 @@ function shuffle(array) {
     array[i] = array[j];
     array[j] = temporary;
   }
-};
+}
 shuffle(duplicatedData);
 
 // array que guarda las cartas cliqueadas.
 const clicked = [];
-
-// array que guarda las cartas emparejadas.
-const matchedCards = [];
-console.log(matchedCards);
 
 // variable que registra el puntaje por cartas emparejadas.
 let score = 0;
@@ -102,7 +97,7 @@ const App = () => {
       }
       drawGrid(duplicatedData);
     }
-  };
+  }
 
   return generalContainer;
 };

@@ -55,33 +55,47 @@ const App = () => {
   scoreboard.className = "score"
   parrafo.appendChild(scoreboard);
 
+  function clickhandler(clickedPokemon, cardImage) {
+  console.log(clickedPokemon);
+  cardImage.setAttribute("src", clickedPokemon.image);
+  clicked.push(clickedPokemon);
+  checkMatch(clicked);
+}
+
   // marcos e imágenes de las cartas.
-  for (let i = 0; i < duplicatedData.length; i++) {
+  const drawGrid = function(duplicatedData) {
+    console.log("drawGrid");
+    cardsContainer.innerHTML = "";
+    for (let i = 0; i < duplicatedData.length; i++) {
     let cardFrames = document.createElement("div");
     cardFrames.className = "card-frames";
     let cardImages = document.createElement("img");
     cardImages.setAttribute("src", "../images/back.jpg");
-    cardImages.addEventListener("click", function() {
-      cardImages.setAttribute("src", duplicatedData[i].image);
-      clicked.push(duplicatedData[i]);
-      checkMatch(clicked);
+    cardImages.addEventListener("click", function(){
+      clickhandler(duplicatedData[i], cardImages);
     });
     cardFrames.appendChild(cardImages);
     cardsContainer.appendChild(cardFrames);
+    }
   }
+  drawGrid(duplicatedData);
 
   // función que compara los pares de cartas cliqueadas.
   function checkMatch(arrr) {
-    if (arrr.length == 2) {
+    if (arrr.length > 2) {
+      console.log("hay 2");
       if (arrr[0].id == arrr[1].id) {
         score += 100;
         scoreboard.innerHTML = ": " + score;
         arrr.length = 0 ;
         alert("Match");
       } else {
+        console.log("no son match");
         arrr.length = 0;
+  //Que las cartas no compatibles vuelvan a su posición original
         alert("No Match");
       }
+      drawGrid(duplicatedData);
     }
   }
 

@@ -55,6 +55,12 @@ const App = () => {
   scoreboard.className = "score"
   parrafo.appendChild(scoreboard);
 
+  // elemento playAgain.
+  const repeatGame = document.createElement("button");
+  repeatGame.innerHTML = "Jugar de Nuevo";
+  main.appendChild(repeatGame);
+
+  //Función que se detona con el click
   function clickhandler(clickedPokemon, cardImage) {
   console.log(clickedPokemon);
   cardImage.setAttribute("src", clickedPokemon.image);

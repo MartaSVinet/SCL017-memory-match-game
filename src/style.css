@@ -29,6 +29,8 @@ body {
   flex-basis: auto;
   cursor: pointer;
   }
+
+  
 .card-frames {
   display: inline-block;
   border: 1px solid black;

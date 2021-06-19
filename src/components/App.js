@@ -46,19 +46,35 @@ const App = () => {
   cardsContainer.className = "cards-container";
   main.appendChild(cardsContainer);
 
-  // elemento que muestra el contador.
-  const parrafo = document.createElement("p");
-  parrafo.className = "parrafo";
-  parrafo.innerHTML = "Puntaje";
-  main.appendChild(parrafo);
-  const scoreboard = document.createElement("span");
-  scoreboard.className = "score"
-  parrafo.appendChild(scoreboard);
+  // tablero para el contador y contador.
+  const scoreboard = document.createElement("article");
+  scoreboard.className = "score-board";
+  const textScore = document.createElement("p");
+  textScore.innerHTML = "Score";
+  textScore.className = "text-score";
+  const numberScore = document.createElement("span");
+  textScore.appendChild(numberScore);
+  scoreboard.appendChild(textScore);
+  main.appendChild(scoreboard);
 
-  // elemento playAgain.
-  const repeatGame = document.createElement("button");
-  repeatGame.innerHTML = "Jugar de Nuevo";
-  main.appendChild(repeatGame);
+  // tablero con el botón para reiniciar la partida.
+  const replayBoard = document.createElement("article");
+  replayBoard.className = "replay-board";
+  const replayButton = document.createElement("button");
+  replayButton.innerHTML = "Play Again";
+  replayButton.className = "replay-button";
+  replayButton.addEventListener("click", function() { // para reiniciar la partida/recargar la página.
+    location.reload();
+  })
+  replayBoard.appendChild(replayButton);
+  main.appendChild(replayBoard);
+
+  // hijo del elemento footer.
+  const declaimerText = document.createElement("p");
+  declaimerText.innerHTML = "Laboratoria, 2021";
+  declaimerText.className = "declaimer-text";
+  footer.appendChild(declaimerText);
+
 
   //Función que se detona con el click
   function clickhandler(clickedPokemon, cardImage) {
@@ -66,7 +82,7 @@ const App = () => {
   cardImage.setAttribute("src", clickedPokemon.image);
   clicked.push(clickedPokemon);
   checkMatch(clicked);
-}
+  }
 
   // marcos e imágenes de las cartas.
   const drawGrid = function(duplicatedData) {
@@ -92,7 +108,7 @@ const App = () => {
       console.log("hay 2");
       if (arrr[0].id == arrr[1].id) {
         score += 100;
-        scoreboard.innerHTML = ": " + score;
+        numberScore.innerHTML = ": " + score;
         arrr.length = 0 ;
         alert("Match");
       } else {

@@ -79,9 +79,15 @@ const App = () => {
   //Función que se detona con el click
   function clickhandler(clickedPokemon, cardImage) {
   console.log(clickedPokemon);
-  cardImage.setAttribute("src", clickedPokemon.image);
-  clicked.push(clickedPokemon);
-  checkMatch(clicked);
+    if (clickedPokemon.matched) {
+      return false;
+    }
+    cardImage.setAttribute("src", clickedPokemon.image);
+    clicked.push(clickedPokemon);
+    setTimeout(function() {
+      checkMatch(clicked);
+      console.log("clicked", clicked);
+    }, 500);
   }
 
   // marcos e imágenes de las cartas.
@@ -89,32 +95,37 @@ const App = () => {
     console.log("drawGrid");
     cardsContainer.innerHTML = "";
     for (let i = 0; i < duplicatedData.length; i++) {
-    let cardFrames = document.createElement("div");
-    cardFrames.className = "card-frames";
-    let cardImages = document.createElement("img");
-    cardImages.setAttribute("src", "../images/back.jpg");
-    cardImages.addEventListener("click", function(){
-      clickhandler(duplicatedData[i], cardImages);
-    });
-    cardFrames.appendChild(cardImages);
-    cardsContainer.appendChild(cardFrames);
+      let cardFrames = document.createElement("div");
+      cardFrames.className = "card-frames";
+      let cardImages = document.createElement("img");
+      if (duplicatedData[i].matched) {
+        cardImages.setAttribute("src", duplicatedData[i].image);
+      } else {
+        cardImages.setAttribute("src", "../images/back.jpg");
+      }
+      cardImages.addEventListener("click", function() {
+        clickhandler(duplicatedData[i], cardImages);
+      });
+      cardFrames.appendChild(cardImages);
+      cardsContainer.appendChild(cardFrames);
     }
   }
   drawGrid(duplicatedData);
 
   // función que compara los pares de cartas cliqueadas.
   function checkMatch(arrr) {
-    if (arrr.length > 2) {
+    if (arrr.length == 2) {
       console.log("hay 2");
       if (arrr[0].id == arrr[1].id) {
         score += 100;
         numberScore.innerHTML = ": " + score;
+        arrr[0].matched = true;
+        arrr[1].matched = true;
         arrr.length = 0 ;
         alert("Match");
       } else {
         console.log("no son match");
         arrr.length = 0;
-  //Que las cartas no compatibles vuelvan a su posición original
         alert("No Match");
       }
       drawGrid(duplicatedData);

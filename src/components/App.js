@@ -6,7 +6,7 @@ const preData = pokemon.items;
 // array de ítems duplicados.
 const data = preData.concat(preData);
 
-// función para barajar duplicatedData.
+// función para barajar data.
 function shuffle(array) {
   for(let i = array.length -1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));

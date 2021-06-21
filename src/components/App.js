@@ -98,7 +98,7 @@ const App = () => {
 
   //Función que se detona con el click
   function clickhandler(objectOfData, imageElement) {
-    imageElement.setAttribute("src", objectOfData.image); // al hacer click en el elemento imagen se le da de fuente el key:value imagen del item en el array duplicatedData.
+    imageElement.setAttribute("src", objectOfData.image); // al hacer click en el elemento imagen se le da de fuente el key:value imagen del item en el array data.
     if (objectOfData.matched) {
       return false;
     }

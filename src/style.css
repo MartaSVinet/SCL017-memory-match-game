@@ -14,7 +14,7 @@ body {
   margin-right: 10%;
 }
 
-.cards-container { /*padre de card-frames*/
+.cards-container {
   display:flex;
   flex-flow: row wrap;
   justify-content:space-evenly;
@@ -31,7 +31,7 @@ body {
   margin: 0.5%;
 }
 
-.score-board { /*padre de text-score*/
+.score-board { 
   display: flex;
   justify-content: center;
 }
@@ -45,7 +45,7 @@ body {
   padding: 0.5%;
 }
 
-.replay-board { /*padre de replay-button*/
+.replay-board { 
   display: flex;
   justify-content: center;
   margin-top: 0.5%;

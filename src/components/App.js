@@ -1,10 +1,10 @@
 import pokemon from '../data/pokemon/pokemon.js';
 
 // array de ítems (objetos).
-const dataItems = pokemon.items;
+const preData = pokemon.items;
 
 // array de ítems duplicados.
-const duplicatedData = dataItems.concat(dataItems);
+const data = preData.concat(preData);
 
 // función para barajar duplicatedData.
 function shuffle(array) {
@@ -15,7 +15,7 @@ function shuffle(array) {
     array[j] = temporary;
   }
 }
-shuffle(duplicatedData);
+shuffle(data);
 
 // array que guarda las cartas cliqueadas.
 const clicked = [];
@@ -75,60 +75,54 @@ const App = () => {
   declaimerText.className = "declaimer-text";
   footer.appendChild(declaimerText);
 
-
-  //Función que se detona con el click
-  function clickhandler(clickedPokemon, cardImage) {
-  console.log(clickedPokemon);
-    if (clickedPokemon.matched) {
-      return false;
-    }
-    cardImage.setAttribute("src", clickedPokemon.image);
-    clicked.push(clickedPokemon);
-    setTimeout(function() {
-      checkMatch(clicked);
-      console.log("clicked", clicked);
-    }, 500);
-  }
-
   // marcos e imágenes de las cartas.
-  const drawGrid = function(duplicatedData) {
-    console.log("drawGrid");
+  const drawGrid = function() {
     cardsContainer.innerHTML = "";
-    for (let i = 0; i < duplicatedData.length; i++) {
+    for (let i = 0; i < data.length; i++) {
       let cardFrames = document.createElement("div");
       cardFrames.className = "card-frames";
       let cardImages = document.createElement("img");
-      if (duplicatedData[i].matched) {
-        cardImages.setAttribute("src", duplicatedData[i].image);
-      } else {
-        cardImages.setAttribute("src", "../images/back.jpg");
-      }
+      cardImages.className = "card-images";
+      cardImages.setAttribute("src", "../images/back.jpg");
       cardImages.addEventListener("click", function() {
-        clickhandler(duplicatedData[i], cardImages);
+        clickhandler(data[i], cardImages);
       });
+      if (data[i].matched) {
+        cardImages.setAttribute("src", data[i].image);
+      }
       cardFrames.appendChild(cardImages);
       cardsContainer.appendChild(cardFrames);
     }
   }
-  drawGrid(duplicatedData);
+  drawGrid();
+
+  //Función que se detona con el click
+  function clickhandler(objectOfData, imageElement) {
+    imageElement.setAttribute("src", objectOfData.image); // al hacer click en el elemento imagen se le da de fuente el key:value imagen del item en el array duplicatedData.
+    if (objectOfData.matched) {
+      return false;
+    }
+    clicked.push(objectOfData); // empujamos el objeto cliqueado al array clicked.
+    setTimeout(function() {
+      checkMatch(clicked);
+    }, 500);
+  }
 
   // función que compara los pares de cartas cliqueadas.
-  function checkMatch(arrr) {
-    if (arrr.length == 2) {
-      console.log("hay 2");
-      if (arrr[0].id == arrr[1].id) {
+  function checkMatch(arrayOfClicked) {
+    if (arrayOfClicked.length == 2) {
+      if (arrayOfClicked[0].id == arrayOfClicked[1].id) {
         score += 100;
         numberScore.innerHTML = ": " + score;
-        arrr[0].matched = true;
-        arrr[1].matched = true;
-        arrr.length = 0 ;
+        arrayOfClicked[0].matched = true;
+        arrayOfClicked[1].matched = true;
+        arrayOfClicked.length = 0 ;
         alert("Match");
       } else {
-        console.log("no son match");
-        arrr.length = 0;
+        arrayOfClicked.length = 0;
         alert("No Match");
       }
-      drawGrid(duplicatedData);
+      drawGrid();
     }
   }
 

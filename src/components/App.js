@@ -100,7 +100,7 @@ const App = () => {
   function clickhandler(objectOfData, imageElement) {
     imageElement.setAttribute("src", objectOfData.image); // al hacer click en el elemento imagen se le da de fuente el key:value imagen del item en el array data.
     if (objectOfData.matched) {
-      return false;
+      return false; // esto impide que las cartas ya emparejadas puedan cliquearse de nuevo y sumar más puntaje.
     }
     clicked.push(objectOfData); // empujamos el objeto cliqueado al array clicked.
     setTimeout(function() {

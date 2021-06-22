@@ -105,7 +105,7 @@ const App = () => {
     clicked.push(objectOfData); // empujamos el objeto cliqueado al array clicked.
     setTimeout(function() {
       checkMatch(clicked);
-    }, 500);
+    }, 1700);
   }
 
   // función que compara los pares de cartas cliqueadas.
@@ -117,10 +117,8 @@ const App = () => {
         arrayOfClicked[0].matched = true;
         arrayOfClicked[1].matched = true;
         arrayOfClicked.length = 0 ;
-        alert("Match");
       } else {
         arrayOfClicked.length = 0;
-        alert("No Match");
       }
       drawGrid();
     }

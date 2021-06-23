@@ -105,7 +105,7 @@ const App = () => {
     clicked.push(objectOfData); // empujamos el objeto cliqueado al array clicked.
     setTimeout(function() {
       checkMatch(clicked);
-    }, 1700);
+    }, 1200);
   }
 
   // función que compara los pares de cartas cliqueadas.

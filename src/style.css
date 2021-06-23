@@ -63,3 +63,64 @@ body {
   font-size: 120%;
   margin-left: 0.5%;
 }
+
+@media only screen and (max-width: 425px) {
+  .title-image {
+    width: 85%;
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+  }
+  .cards-container {
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-bottom: 6%;
+  }
+  .card-frames {
+    height: 50px;
+    width: 50px;
+  }
+  .card-images {
+    height: 50px;
+    width: 50px;
+  }
+  .text-score {
+    font-size: 150%;
+    margin-bottom: 5%;
+  }
+  .replay-button {
+    font-size: 100%;
+  }
+  .declaimer-text {
+    margin-top: 20%;
+    font-size: 80%;
+  }
+}
+
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+  .title-image {
+    width: 88%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+  }
+  .cards-container {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .card-frames {
+    height: 100px;
+    width: 100px;
+  }
+  .card-images {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .cards-container {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}

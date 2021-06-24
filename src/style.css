@@ -75,12 +75,10 @@ body {
     margin-bottom: 6%;
   }
   .card-frames {
-    height: 50px;
-    width: 50px;
+    width: 30%;
   }
   .card-images {
-    height: 50px;
-    width: 50px;
+    width: 100%;
   }
   .text-score {
     font-size: 150%;
@@ -107,12 +105,10 @@ body {
     margin-right: 5%;
   }
   .card-frames {
-    height: 100px;
-    width: 100px;
+    width: 20%;
   }
   .card-images {
-    height: 100px;
-    width: 100px;
+    width: 100%;
   }
 }
 

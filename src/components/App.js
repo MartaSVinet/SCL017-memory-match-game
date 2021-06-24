@@ -23,6 +23,7 @@ const clicked = [];
 // variable que registra el puntaje por cartas emparejadas.
 let score = 0;
 
+
 const App = () => {
   // estructura html.
   const generalContainer = document.createElement("div");
@@ -114,6 +115,9 @@ const App = () => {
       if (arrayOfClicked[0].id == arrayOfClicked[1].id) {
         score += 100;
         numberScore.innerHTML = ": " + score;
+        if (score == 900) {
+          alert("You've just catch them all!!");
+        }
         arrayOfClicked[0].matched = true;
         arrayOfClicked[1].matched = true;
         arrayOfClicked.length = 0 ;

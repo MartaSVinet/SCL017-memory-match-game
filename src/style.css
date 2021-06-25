@@ -59,3 +59,102 @@ body {
 .declaimer-text {
   margin: 1% 0% 0% 1%;
 }
+
+@media only screen and (max-width: 425px) {
+  .title-image {
+    width: 96%;
+    margin: 5% 2%;
+  }
+
+  .cards-container {
+    margin: 0% 5% 0%;
+  }
+
+  .card-frames {
+    width: 30%;
+  }
+
+  .card-images {
+    width: 100%;
+  }
+
+  .score-board {
+    margin: 2%;
+  }
+}
+
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+  .title-image {
+    width: 96%;
+    margin: 5% 2%;
+  }
+
+  .cards-container {
+    margin: 0% 5% 0%;
+  }
+
+  .card-frames {
+    width: 30%;
+  }
+
+  .card-images {
+    width: 100%;
+  }
+
+  .score-board {
+    margin: 2%;
+  }
+
+  .text-score {
+    font-size: 250%;
+  }
+
+  .replay-button {
+    font-size: 200%;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .title-image {
+    width: 90%;
+    margin: 5% 5% 3% 5%;
+  }
+
+  .cards-container {
+    margin: 0% 5% 0%;
+  }
+
+  .card-frames {
+    width: 15%;
+  }
+
+  .card-images {
+    width: 100%;
+  }
+
+  .score-board {
+    margin: 1%;
+  }
+
+  .text-score {
+    font-size: 250%;
+  }
+
+  .replay-button {
+    font-size: 200%;
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  .title-image {
+    width: 70%;
+  }
+
+  .card-frames {
+    width: 10%;
+  }
+  
+  .card-images {
+    width: 100%;
+  }
+}

@@ -1,24 +1,40 @@
-## Perfil de usuarix:
+# Memory Match: Pokémon Edition!
 
-Está en el rango estario millennial (25 a 40 años app.). La temática del juego (Pokémon) le resulta a la vez evocativa y contemporánea, pues la recuerda de las animaciones y los video juegos de su infancia, y la nota vigente como marca comercial y de entretenimiento para las generaciones actuales.
+## Definición del producto:
 
-Recurre a la aplicación en momentos de ocio, buscando recrearse.
+“Memory Match: Pokémon Edition!” es, en pocas palabras, un memorama en línea con temática de Pokémon. Un memorama es un juego de cartas en solitario, en el que se despliega cara abajo un set de cartas y se conmina al jugador a ir volteándolas cara arriba de a dos por turno, con el fin de emparejarlas por coincidencia de caras. El jugador deberá dejar los pares cara arriba, o descubiertos, si sus caras son las mismas, y volver a voltearlos cara abajo, o cubrirlos, si sus caras son distintas, cuidándose, si este último es el caso, de recordar lo que figura en esas caras. El juego culmina una vez que el jugador ha emparejado todas las cartas, en cuyas caras, en el caso de “Memory Match: Pokémon Edition!”, figuran 9 pokémons distintos.
 
-## U.H.1.- Como usuario, quiero jugar en una interfaz bien proporcionada y comprensible a primera vista.
+## Definición del perfil de usuario:
 
-### Criterios de aceptación:
+El usuario ideal de “Memory Match: Pokémon Edition!” está en rango etario millennial, es decir, tiene de 25 a 40 años aproximadamente. La temática del memorama le resulta a la vez evocativa y contemporánea, pues la recuerda de las animaciones televisivas y los videojuegos de su infancia, y a la vez la nota vigente como franquicia de medios de entretenimiento entre las generaciones actuales. Eso dicho, dada la sencillez del diseño y de las funcionalidades de la aplicación, su acceso no está en rigor vetado a usuarios más jóvenes.
+La experiencia ideal de uso es, en esencia, recreativa: el usuario recurre a la aplicación en momentos de ocio, buscando distención y entretenimiento.
 
-Los componentes gráficos de la aplicación (encabezado, grilla de cartas, pie de página, etc.) se jerarquizan, posicionan y ajustan en tamaño y color en razón de optimizar su visibilidad. La pantalla en general luce ordenada y resulta autoexplicativa.
+## Cómo funcionan el juego y la aplicación:
 
-### Definición de terminado:
+En la interfaz aparece desplegado un set de 18 cartas, todas ellas inicialmente cara abajo. Al cliquearlas, se las voltea cara arriba de a dos por vez o turno, y se evalúa si sus caras coinciden o no. Si las caras coinciden, el par de cartas permanece descubierto y el jugador gana puntaje; en cambio, si las caras no coinciden, el par de cartas vuelve a cubrirse y el puntaje no se altera. El jugador podrá cliquear las cartas no emparejadas tantas veces como le haga falta para emparejarlas, sin límite de turnos ni de tiempo, y habrá ganado la partida una vez que las 18 cartas se hallen descubiertas o, lo mismo, una vez que haya formado 9 pares. Podrá, asimismo, llevar el registro de su puntaje acumulado, que en la interfaz figura como “score” y cuyo tope es de 900 puntos (100 puntos por par de cartas con caras coincidentes). Finalmente, podrá cliquear el botón ubicado bajo el “score” si desea reiniciar la partida en curso o, al acabar esta, jugar una nueva. Reiniciar la partida en curso/iniciar una nueva partida implica que el set de cartas completo se vuelve a desplegar en pantalla re-barajado y cara abajo.
 
-(Aún en proceso).
+## Historias de usuario:
 
-Los bosquejos de baja fidelidad (en papel y en digital) dan cuenta de la estructura gráfica básica de la aplicación.
+### H. U. 1.- “Como usuario, quiero acceder a una interfaz visualmente sencilla, esto es, comprensible en su totalidad a primera vista.”
+
+### H. U. 2.- “Como usuario, quiero jugar sin tener que registrarme.”
+
+
+### H. U. 3.- “Como usuario, quiero que el set de cartas se despliegue en pantalla ya barajado y volteado cara abajo, y que cada carta se voltee cara arriba al ser cliqueada.”
+
+
+### H. U. 4.- “Como usuario, quiero que el par de cartas cliqueadas permanezca descubierto si sus caras coinciden, y que vuelva a cubrirse si sus caras no coinciden.”
+
+### H. U. 5.- “Como usuario, quiero poder jugar más de una partida, o reiniciar la partida en curso en cualquier momento.”
+
+### H. U. 6.- “Como usuario, quiero llevar el registro visual del estado de la partida.”
+
+### H. U. 7.- “Como usuario, quiero poder jugar el memorama indistintamente en mi teléfono, en mi tablet y en mi notebook.”
+
+## Prototipo de baja fidelidad:
 
 ![](src/images/bajafidelidad1.png)
 
-El prototipo de alta fidelidad (creado en Figma) muestra, además, la "ornamentación" (un fondo y un tipo de letra acorde a la temática del juego).
 
 # Memory Match Game
 

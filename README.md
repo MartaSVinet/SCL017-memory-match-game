@@ -17,23 +17,91 @@ En la interfaz aparece desplegado un set de 18 cartas, todas ellas inicialmente 
 
 ### H. U. 1.- “Como usuario, quiero acceder a una interfaz visualmente sencilla, esto es, comprensible en su totalidad a primera vista.”
 
+#### Criterios de aceptación:
+
+- Se diseña una interfaz sin exceso de adornos, con solo una pantalla de componenetes auto explicativos.
+- Los componentes de la interfaz (título, grilla de cartas, puntaje, pie de página...) se bocetean correctamente jerarquizados.
+- En los bocetos de baja y alta fidelidad, el tamaño y color de los componentes de la interfaz se ajustan en pos de optimizar su visualización.
+
+#### Definición de terminado:
+
+- Se realiza prototipo de baja fidelidad. En este se bocetea la estructura general de la aplicación.
+- Se realiza el prototipo de alta fidelidad (en Figma). Este muestra más fielmente la apariencia “final” de la aplicación.
+
 ### H. U. 2.- “Como usuario, quiero jugar sin tener que registrarme.”
 
+#### Criterios de aceptación:
+
+- No hay elemento input ni otro similar mediante el cual se le pida al usuario que se identifique.
+
+#### Definición de terminado:
+
+- El set de cartas y el resto de los componentes de la aplicación son visibles y funcionales apenas carga la página web.
 
 ### H. U. 3.- “Como usuario, quiero que el set de cartas se despliegue en pantalla ya barajado y volteado cara abajo, y que cada carta se voltee cara arriba al ser cliqueada.”
 
+#### Criterios de aceptación:
+
+- El set de cartas aparece desde el primer momento ya barajado y volteado cara abajo.
+- Las cartas se voltean cara arriba al ser cliqueadas.
+
+#### Definición de terminado:
+
+- Se crea la función shuffle para barajar las cartas cada vez que cargue la página web.
+- Se da un evento click a las cartas, para que estas reaccionen al él voltéandose cara arriba.
 
 ### H. U. 4.- “Como usuario, quiero que el par de cartas cliqueadas permanezca descubierto si sus caras coinciden, y que vuelva a cubrirse si sus caras no coinciden.”
 
+#### Criterios de aceptación:
+
+- Las cartas que coinciden permaneces descubiertas.
+- Las cartas que no coinciden vuelven a cubrirse.
+
+#### Definición de terminado:
+
+- Se crea la función checkMatch, que diferencia entre las cartas cuyos ids son iguales o distintos. 
+
 ### H. U. 5.- “Como usuario, quiero poder jugar más de una partida, o reiniciar la partida en curso en cualquier momento.”
+
+#### Criterios de aceptación:
+
+- El partida en curso puede reiniciarse.
+- Luego de terminar la partida en curso, puede iniciarse una nueva partida.
+
+#### Definición de terminado:
+
+- Se crea un elemento botón con un evento click que recarga la página, volteando del revés todas cartas y re-bajarndo el set completo.
 
 ### H. U. 6.- “Como usuario, quiero llevar el registro visual del estado de la partida.”
 
+#### Criterios de aceptación:
+
+- Las cartas que hacen par permanecen cara arriba.
+- Cada vez que las cartas hacen par, el usuario ve en la pantalla que su puntaje aumenta.
+
+#### Definición de terminado:
+
+- Se crea la función checkMatch, que reconoce la igualdad de los ids de las cartas cliqueadas.
+
+- Dentro de la función checkMatch, un condicional aumenta el puntaje cada vez que se reconoce la igualdad de los ids de las cartas cliqueadas.
+
 ### H. U. 7.- “Como usuario, quiero poder jugar el memorama indistintamente en mi teléfono, en mi tablet y en mi notebook.”
+
+#### Criterios de aceptación:
+
+- El disiño de la aplicación es responsivo.
+
+#### Definición de terminado:
+
+- Se agrega al css las media queris que permiten visualizar y jugar el memorama en celulares y tablets, además de notebooks.
 
 ## Prototipo de baja fidelidad:
 
 ![](src/images/bajafidelidad1.png)
+
+## Prototipo de alta fidelidad:
+
+(LINK AL PROTOTIPO EN FIGMA)
 
 
 # Memory Match Game

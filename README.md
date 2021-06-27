@@ -2,7 +2,7 @@
 
 ## Definición del producto:
 
-“Memory Match: Pokémon Edition!” es, en pocas palabras, un memorama en línea con temática de Pokémon. Un memorama es un juego de cartas en solitario, en el que se despliega cara abajo un set de cartas y se conmina al jugador a ir volteándolas cara arriba de a dos por turno, con el fin de emparejarlas por coincidencia de caras. El jugador deberá dejar los pares cara arriba, o descubiertos, si sus caras son las mismas, y volver a voltearlos cara abajo, o cubrirlos, si sus caras son distintas, cuidándose, si este último es el caso, de recordar lo que figura en esas caras. El juego culmina una vez que el jugador ha emparejado todas las cartas, en cuyas caras, en el caso de “Memory Match: Pokémon Edition!”, figuran 9 pokémons distintos.
+“Memory Match: Pokémon Edition!” es, en pocas palabras, un memorama en línea con temática de Pokémon. Un memorama es un juego de cartas en solitario, en el que se despliega cara abajo un set de cartas y se conmina al jugador a ir volteándolas cara arriba de a dos por turno, con el fin de emparejarlas por coincidencia de caras. El jugador deberá cliquear las cartas para voltearlas, y el juego dejará los pares cara arriba, o descubiertos, si sus caras son las mismas, o volverá a voltearlos cara abajo, o cubrirlos, si sus caras son distintas. El juego culmina una vez que el jugador ha emparejado todas las cartas, en cuyas caras, en el caso de “Memory Match: Pokémon Edition!”, figuran 9 pokémons distintos.
 
 ## Definición del perfil de usuario:
 

@@ -101,7 +101,7 @@ En la interfaz aparece desplegado un set de 18 cartas, todas ellas inicialmente 
 
 ## Prototipo de alta fidelidad:
 
-(LINK AL PROTOTIPO EN FIGMA)
+[Puedes verlo aquí.](https://www.figma.com/proto/EoD7wlPccJ5DmST0eA23KN/Untitled?node-id=11%3A5&scaling=min-zoom)
 
 
 # Memory Match Game

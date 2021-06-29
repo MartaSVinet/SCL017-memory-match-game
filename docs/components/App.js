@@ -72,7 +72,7 @@ const App = () => {
       const cardFrames = document.createElement("div");
       cardFrames.className = "card-frames";
       const cardImages = document.createElement("img");
-            cardImages.setAttribute("src", "../images/back.jpg");
+            cardImages.setAttribute("src", "images/back.jpg");
             cardImages.className = "card-back";
       if (data[i].matched) {
         cardImages.setAttribute("src", data[i].image);

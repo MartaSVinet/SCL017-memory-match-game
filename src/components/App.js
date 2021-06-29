@@ -36,7 +36,7 @@ const App = () => {
   title.appendChild(titleImage);
   header.appendChild(title);
 
-  const cardsContainer = document.createElement("section");
+ const cardsContainer = document.createElement("section");
   cardsContainer.className = "cards-container";
   main.appendChild(cardsContainer);
 
@@ -72,13 +72,17 @@ const App = () => {
       const cardFrames = document.createElement("div");
       cardFrames.className = "card-frames";
       const cardImages = document.createElement("img");
-      cardImages.className = "card-images";
-      cardImages.setAttribute("src", "../images/back.jpg");
+            cardImages.setAttribute("src", "../images/back.jpg");
+            cardImages.className = "card-back";
       if (data[i].matched) {
         cardImages.setAttribute("src", data[i].image);
+        
       }
       cardImages.addEventListener("click", function() {
-        clickhandler(data[i], cardImages);
+        cardImages.className = "card-images";
+        setTimeout(function() {
+          clickhandler(data[i], cardImages);
+        }, 400);        
       });
       cardFrames.appendChild(cardImages);
       cardsContainer.appendChild(cardFrames);
@@ -102,7 +106,7 @@ const App = () => {
       score += 100;
       numberScore.innerHTML = score;
       if (score == 900) {
-        textScore.innerHTML = "Congratulations! You've caught them all!!";
+        textScore.innerHTML = "Congrats! You've caught them all!"
       }
       arrayOfClicked[0].matched = true;
       arrayOfClicked[1].matched = true;

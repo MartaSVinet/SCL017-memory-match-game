@@ -102,7 +102,7 @@ const App = () => {
       score += 100;
       numberScore.innerHTML = score;
       if (score == 900) {
-        alert("You've just catch them all!!");
+        textScore.innerHTML = "Congratulations! You've caught them all!!";
       }
       arrayOfClicked[0].matched = true;
       arrayOfClicked[1].matched = true;
